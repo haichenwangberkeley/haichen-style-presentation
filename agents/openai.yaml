@@ -1,0 +1,4 @@
+interface:
+  display_name: "Haichen-style Presentation"
+  short_description: "Create Beamer talks in Haichen Wang's style"
+  default_prompt: "Use $haichen-style-presentation to create a complete scientific presentation in Haichen Wang's preferred Beamer style."
