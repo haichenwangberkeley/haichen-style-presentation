@@ -1,6 +1,9 @@
 % Clean UC Berkeley Beamer theme for the Haichen-style presentation skill.
+% UC Berkeley Beamer adaptation copyright 2026 Haichen Wang.
 % Derived from beamerthemeUCBerkeley.sty v1.2 (2021-01-05), by
-% LianTze Lim and Ryan Looney for Overleaf. Course content is not included.
+% LianTze Lim and Ryan Looney for Overleaf. The upstream theme and this
+% adaptation are licensed under CC BY 4.0. See LICENSE.md. The UC Berkeley
+% wordmark is excluded from that license. Course content is not included.
 \ProvidesPackage{beamerthemeUCBerkeley}[2026/09/18 Clean Berkeley theme]
 
 \RequirePackage{etoolbox}
@@ -34,6 +37,12 @@
 \definecolor{BerkeleyBlue}{HTML}{003262}
 \definecolor{BerkeleyGrey}{HTML}{5D6670}
 
+\newcommand{\presentationstylecredit}{Presentation style by Haichen Wang}
+\hypersetup{%
+  pdfcreator={Haichen Wang UC Berkeley Beamer adaptation},
+  pdfsubject={Based on the Overleaf UC Berkeley Beamer Theme, CC BY 4.0}%
+}
+
 \setbeamercolor{normal text}{fg=BerkeleyBlue,bg=white}
 \setbeamercolor{structure}{fg=BerkeleyBlue}
 \setbeamercolor{titlelike}{fg=Medalist}
@@ -66,6 +75,9 @@
     \node[anchor=south west,inner sep=0pt,draw=none,
       xshift=0.055\paperheight,yshift=0.005\paperheight]
       at (current page.south west) {\pgfuseimage{berkeleywordmark}};
+    \node[anchor=south east,inner sep=0pt,draw=none,text=white,
+      font=\scriptsize,xshift=-0.035\paperheight,yshift=0.010\paperheight]
+      at (current page.south east) {\presentationstylecredit};
   \end{tikzpicture}%
 }
 \setbeamertemplate{footline}{%
