@@ -1,0 +1,96 @@
+% Clean UC Berkeley Beamer theme for the Haichen-style presentation skill.
+% Derived from beamerthemeUCBerkeley.sty v1.2 (2021-01-05), by
+% LianTze Lim and Ryan Looney for Overleaf. Course content is not included.
+\ProvidesPackage{beamerthemeUCBerkeley}[2026/09/18 Clean Berkeley theme]
+
+\RequirePackage{etoolbox}
+\RequirePackage{fontspec}
+\RequirePackage{tikz}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+% Use the template fonts when installed and portable metric-compatible
+% fallbacks otherwise. This theme is intended for XeLaTeX or LuaLaTeX.
+\IfFontExistsTF{Georgia}
+  {\setromanfont{Georgia}}
+  {\IfFontExistsTF{Liberation Serif}
+    {\setromanfont{Liberation Serif}}
+    {\setromanfont{Latin Modern Roman}}}
+\IfFontExistsTF{Open Sans}
+  {\setsansfont[Scale=MatchLowercase]{Open Sans}}
+  {\IfFontExistsTF{Liberation Sans}
+    {\setsansfont[Scale=MatchLowercase]{Liberation Sans}}
+    {\setsansfont[Scale=MatchLowercase]{Latin Modern Sans}}}
+
+\definecolor{BerkeleyGold}{RGB}{193,129,45}
+\definecolor{Medalist}{HTML}{C4820E}
+\definecolor{BerkeleyBlueText}{RGB}{48,99,126}
+\definecolor{FoundersRock}{HTML}{3B7EA1}
+\definecolor{BerkeleyTableGold}{RGB}{222,157,46}
+\definecolor{CaliforniaGold}{HTML}{FDB515}
+\definecolor{BerkeleyTableBlueOne}{RGB}{207,226,234}
+\definecolor{BerkeleyTableBlueTwo}{RGB}{232,241,245}
+\definecolor{BerkeleyBlue}{HTML}{003262}
+\definecolor{BerkeleyGrey}{HTML}{5D6670}
+
+\setbeamercolor{normal text}{fg=BerkeleyBlue,bg=white}
+\setbeamercolor{structure}{fg=BerkeleyBlue}
+\setbeamercolor{titlelike}{fg=Medalist}
+\setbeamercolor{frametitle}{fg=Medalist,bg=white}
+\setbeamercolor{alerted text}{fg=Medalist}
+\setbeamercolor{block title}{fg=white,bg=BerkeleyBlue}
+\setbeamercolor{block body}{fg=BerkeleyBlue,bg=BerkeleyTableBlueTwo}
+\setbeamercolor{block title alerted}{fg=white,bg=Medalist}
+\setbeamercolor{block body alerted}{fg=BerkeleyBlue,bg=BerkeleyTableBlueTwo}
+
+\setbeamerfont{title}{family=\rmfamily,size=\LARGE}
+\setbeamerfont{author}{size=\large}
+\setbeamerfont{frametitle}{family=\rmfamily,series=\mdseries,size=\Large}
+\setbeamerfont{block title}{family=\rmfamily,size=\large}
+
+\setbeamersize{text margin left=0.48cm,text margin right=0.48cm}
+\setbeamertemplate{frametitle}{\vskip0.02\paperheight\insertframetitle}
+\setbeamertemplate{itemize item}{\color{Medalist}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{BerkeleyBlue}$\bullet$}
+\setlength{\leftmargini}{1.25em}
+\setlength{\leftmarginii}{1em}
+
+\pgfdeclareimage[height=0.0777\paperheight]{berkeleywordmark}{UCBerkeley_wordmark_white}
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \fill[BerkeleyBlue]
+      (current page.south west) -- +(0,0.09\paperheight)
+      -- +(\paperwidth,0.04\paperheight)
+      -- (current page.south east) -- cycle;
+    \node[anchor=south west,inner sep=0pt,draw=none,
+      xshift=0.055\paperheight,yshift=0.005\paperheight]
+      at (current page.south west) {\pgfuseimage{berkeleywordmark}};
+  \end{tikzpicture}%
+}
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \begin{center}
+    \color{white}\usebeamerfont{page number in head/foot}\scriptsize
+    \insertframenumber/\inserttotalframenumber
+  \end{center}
+  \vskip-0.2em
+}
+
+% Mandatory Haichen-style statement commands. Keep one of each in every frame.
+\newcommand{\slideopening}[1]{%
+  \par\noindent{\small\bfseries\color{BerkeleyBlue}\raggedright #1\par}%
+  \vspace{0.12cm}%
+}
+\newcommand{\slideclosing}[1]{%
+  \par\vspace{0.12cm}\noindent{\small\bfseries\color{BerkeleyBlue}\raggedright #1\par}%
+}
+\newcommand{\source}[1]{%
+  \par\vspace{0.04cm}\noindent{\scriptsize\color{BerkeleyGrey}\raggedright Source: #1\par}%
+}
+
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\tableheadrow}{\rowcolor{BerkeleyTableGold}}
+\newcommand{\tableheadcol}[1]{{\bfseries\color{white}#1}}
+\rowcolors{2}{BerkeleyTableBlueOne}{BerkeleyTableBlueTwo}
+\AtBeginEnvironment{tabular}{\color{black}}

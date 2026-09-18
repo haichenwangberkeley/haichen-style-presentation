@@ -1,0 +1,74 @@
+\documentclass[aspectratio=169,10pt,xcolor={table,dvipsnames}]{beamer}
+
+\usepackage{lmodern}
+\usetheme{UCBerkeley}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,tikz}
+
+\title{Scientific presentation title}
+\subtitle{Analysis or project subtitle}
+\author{Presenter Name}
+\institute{Department of Physics, University of California, Berkeley}
+\date{Meeting Name\\\today}
+
+\begin{document}
+
+\begin{frame}
+\vspace{0.35cm}
+{\usebeamerfont{title}\color{Medalist}\inserttitle\par}
+\vspace{0.18cm}
+\slideopening{This talk presents the scientific question, method, and current result.}
+\vspace{0.22cm}
+{\large\color{BerkeleyBlue}\insertsubtitle\par}
+\vspace{0.30cm}
+{\color{BerkeleyBlue}\insertauthor\\\insertinstitute\par}
+\vspace{0.25cm}
+{\color{BerkeleyBlue}\insertdate\par}
+\vspace{0.25cm}
+\slideclosing{The main result and its current validation status are stated at the start.}
+\end{frame}
+
+\begin{frame}{Outline}
+\slideopening{The talk is organized around the question, evidence, and conclusion.}
+\begin{enumerate}
+  \item Scientific question and inputs
+  \item Method and supporting evidence
+  \item Result, limitations, and next steps
+\end{enumerate}
+\slideclosing{We begin with the scientific question and the information used to address it.}
+\end{frame}
+
+\begin{frame}{Evidence}
+\slideopening{The method and the evidence used to evaluate it are summarized here.}
+\begin{columns}[T,onlytextwidth]
+\column{0.38\textwidth}
+\begin{itemize}
+  \item State the input or sample.
+  \item Define the method or comparison.
+  \item Give the validation criterion.
+\end{itemize}
+\column{0.59\textwidth}
+\begin{block}{Primary visual}
+\centering
+\vspace{1.15cm}
+Replace this box with a plot, table, or diagram.
+\vspace{1.15cm}
+\end{block}
+\end{columns}
+\slideclosing{State the supported result, limitation, or decision in this sentence.}
+\source{Add the public reference or collaboration source needed by the audience.}
+\end{frame}
+
+\begin{frame}{Summary and next steps}
+\slideopening{The result, its present limitation, and the next action are summarized here.}
+\begin{itemize}
+  \item Result: state the principal quantitative or technical outcome.
+  \item Status: label the result as internal, preliminary, expected, or published.
+  \item Next step: name the validation, input, or decision that remains.
+\end{itemize}
+\begin{alertblock}{Caveat: required check}
+State what must be checked and why it affects the interpretation.
+\end{alertblock}
+\slideclosing{End with the supported takeaway and the next decision or deliverable.}
+\end{frame}
+
+\end{document}

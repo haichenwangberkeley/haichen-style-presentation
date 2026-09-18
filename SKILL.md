@@ -15,6 +15,7 @@ Create a complete, conventional ATLAS meeting presentation whose content and sta
 - Read [references/analysis-updates-and-comparisons.md](references/analysis-updates-and-comparisons.md) when the talk reports progress since an earlier result, compares methods or trainings, or is a short working-meeting update derived from a fuller analysis record.
 - Read [references/preparation-and-review.md](references/preparation-and-review.md) when creating a talk, adapting one to a new audience or duration, or preparing a final review and rehearsal.
 - Read [references/statistical-validation.md](references/statistical-validation.md) when the talk contains fits, contours, nuisance parameters, toys, Asimov data, systematic variations, or statistical-model validation.
+- Read [references/uc-berkeley-beamer.md](references/uc-berkeley-beamer.md) when the user requests UC Berkeley styling and no supplied Berkeley source must be preserved. Use the clean asset bundle there without importing course or example content.
 
 The user's current instructions take precedence. Preserve the supplied template's styling, but adapt its layout to meet the mandatory opening and closing rule; an existing template is not an exemption.
 
