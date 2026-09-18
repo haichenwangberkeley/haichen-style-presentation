@@ -52,6 +52,20 @@ Do not rotate among model, architecture, framework, system, and engine merely fo
 
 Avoid the stock construction `not A; it is B` when B can be stated directly. The same applies to decorative `not only A, but also B` and `rather than A, B` constructions.
 
+Do not use semicolons or em dashes in visible presentation text. Use a full stop, comma, colon, or two sentences. This applies to titles, opening and closing statements, bullets, captions, table text, source lines, footers, and text embedded in figures.
+
+Avoid making a sample, simulation, table, plot, or other artifact sound like an actor when describing how it was used. Prefer a construction that names the analysis action. For example:
+
+| Avoid | Use |
+| --- | --- |
+| Single-Higgs simulation fixes the resonant contribution and signal shape. | Single-Higgs simulation was used to determine the resonant contribution and signal shape. |
+| The table establishes the sample coverage. | The samples included in the study are listed in the table. |
+| The plot proves that the model is robust. | The comparison in the plot was used to test the model. |
+
+Do not use `fixes` as a general scientific verb. Use `determine`, `constrain`, `derive`, `estimate`, `define`, or `use`, according to the actual relationship. Use `fixed` only when a parameter was deliberately held constant, and state what it was fixed to or which procedure fixed it.
+
+Introduce unresolved information with `Caveat:` and state the check that remains. Prefer `Caveat: the generator and shower configurations must be confirmed` over labels such as `Open metadata` or `Pending tags`.
+
 Keep a contrast when it carries scientific information. A comparison between the current method and the proposed method may be essential. Express it plainly, using `while`, `by comparison`, `instead`, or two direct sentences when appropriate.
 
 The user's writing often lets the reader follow the reasoning:
@@ -67,6 +81,21 @@ Use first person when appropriate to the document and collaboration practice. `I
 
 Allow a moderately long explanatory sentence when its clauses belong together. Follow it with a short result or commitment when that improves emphasis. Do not make every bullet or sentence follow the same rhythm.
 
+## Mechanism, planned work, and contingency
+
+Explain the physical or computational mechanism before claiming a broad benefit. State what information, detector response, event selection, correction, or statistical procedure produces the change. A statement such as `The model captures complex correlations` is incomplete unless the relevant inputs, use of those correlations, and observed consequence are identified.
+
+When presenting planned work, use the parts that apply:
+
+1. current method or analysis;
+2. specific limitation;
+3. proposed model, selection, control region, correction, or test;
+4. implementation and validation procedure;
+5. measured or expected result;
+6. next deliverable or fallback.
+
+State a contingency through the specific technical risk, the evidence for it, its consequence, the test or decision criterion, and the baseline result retained if the proposed method fails. Avoid replacing these details with a general claim of robustness or risk management.
+
 ## Claims and status
 
 - Tie strong words such as significant, robust, novel, or improved to a number, comparison, test, publication, adoption status, or clearly stated criterion.
@@ -81,6 +110,8 @@ Use short phrase titles that carry the subject or message. Avoid long sentence t
 
 Write bullets as compact scientific statements. Each bullet should add motivation, method, evidence, status, or consequence. Remove rhetorical setup that delays the technical content.
 
+Write the opening statement as a preview of the rest of the slide. It should help the audience switch context by naming what will be described, compared, or checked. Do not use the opening only to announce a conclusion or repeat the title. The body supplies the evidence, and the closing states the resulting conclusion, caveat, or action.
+
 Do not expose private proposal language, internal source paths, prompt names, or production notes. Adapt general writing preferences to the presentation; do not copy passages from private source documents.
 
 ## Revision check
@@ -90,8 +121,13 @@ Before accepting visible text, ask:
 - Is the scientific object named?
 - Is it clear who or what performs the action?
 - Does the sentence explain the actual technical relationship?
+- Is the mechanism stated before the claimed benefit?
 - Is an evaluative claim supported?
+- When a limitation matters, are the test, decision criterion, and fallback concrete?
 - Can a stock contrast be stated directly?
 - Has shortening removed necessary reasoning or a status qualifier?
 - Does the wording sound natural in an ATLAS or CMS meeting?
 - Is the sentence short enough to read on a slide without becoming vague?
+- Does the opening preview the body of the slide?
+- Does any sample, simulation, table, or plot appear to act on the analysis when the intended meaning is that it was used by the analysis?
+- Are semicolons, em dashes, vague uses of `fixes`, and vague caveat labels absent?

@@ -20,9 +20,31 @@ If the audience knows the samples, the speaker may say that the slide is include
 
 Do not silently omit a requested field. Mark it as unavailable, not yet identified, not applicable, or pending confirmation.
 
+Separate workflow coverage from data exposure. If an accepted manifest excludes files, periods, samples, or campaigns, state both the completed accepted scope and the missing coverage. Do not describe successful processing of the accepted tasks as complete exposure.
+
+If the sample table becomes unreadable, split it by scientific role across adjacent main-body slides. Do not drop identifiers or shrink the table to preserve a single-slide layout.
+
+## Inherited or externally trained models
+
+Apply the machine-learning record whenever a model output materially affects event selection, categorization, reconstruction, calibration, or inference, even when the current study did not train the model. An inherited score is not self-documenting.
+
+Record, as applicable:
+
+- the model or branch name, implementation or release, and responsible source;
+- the analysis use and operating point;
+- architecture or model-family parameters;
+- input features and preprocessing;
+- targets, class and process composition, and sample partition;
+- sampling, event, class, or loss weights;
+- training schedule and random seeds;
+- independent-test performance and overtraining checks;
+- calibration, domain, and operating-point validation for the data-taking period and analysis phase space.
+
+When the information is unavailable, keep the record in the main body and mark each unknown field. State the consequence for the affected result, such as a conditional interpretation or an open production-certification gate.
+
 ## Machine-learning sample partition
 
-When machine learning is the event classifier, principal observable, reconstruction method, or another major analysis component, state how the samples are partitioned into training, validation, and testing sets.
+When machine learning is the event classifier, principal observable, reconstruction method, or another major analysis component, state how the samples are partitioned into training, validation, and testing sets. This requirement also applies to an inherited model unless its source record supplies the information.
 
 Record:
 
@@ -80,6 +102,8 @@ Show training and validation behavior when available. Label a curve and its samp
 ## Evaluation and analysis use
 
 State which sample produces each performance result. Keep the independent test result distinct from training or validation diagnostics. Include the metric definition, operating point, uncertainty or variation, and comparison baseline when they are needed to interpret the result.
+
+Use a metric that represents the relevant statistical power. When raw or weighted event counts are misleading, report effective statistics, equivalent Monte Carlo integrated luminosity, or another physically meaningful quantity and define it.
 
 Explain how the model output enters the physics analysis: selection, categorization, regression, reconstruction, calibration, observable, or fit input. State whether the downstream impact has been measured or is only expected.
 
