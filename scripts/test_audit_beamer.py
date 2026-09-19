@@ -82,6 +82,26 @@ class StatementGateTests(unittest.TestCase):
         errors = visible_text_errors("One clause; another clause — the plot fixes the result.")
         self.assertEqual(3, len(errors))
 
+    def test_visible_hep_terminology_prohibitions(self):
+        text = (
+            "Released data sidebands pass the model gate at the nominal exposure. "
+            "A top-rich sample covers the signal interval. The procedure qualifies "
+            "the support and admits a family. The plot checks support limits. "
+            "Template replicas fluctuate the bins. Six frozen limits describe a "
+            "Higgs-shaped yield."
+        )
+        self.assertEqual(11, len(visible_text_errors(text)))
+
+    def test_preferred_hep_terminology_passes(self):
+        text = (
+            "The data sidebands are fit. The model requirement is satisfied. "
+            "The integrated luminosity is 168 fb-1. Events in the signal window "
+            "are blinded. The top-enriched sample is used to model the background. "
+            "Weighted MC bin contents are sampled according to the effective-Poisson "
+            "prescription."
+        )
+        self.assertEqual([], visible_text_errors(text))
+
 
 if __name__ == "__main__":
     unittest.main()

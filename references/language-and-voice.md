@@ -48,6 +48,40 @@ Keep them when they are literal or established technical terms. A detector layer
 
 Do not rotate among model, architecture, framework, system, and engine merely for variety. Repeat the correct technical noun when the referent is unchanged.
 
+## HEP terminology and technical subjects
+
+Use the established term for the analysis object or operation. Do not replace it with a more dramatic or supposedly more concise synonym.
+
+- Use `sidebands`, or `unblinded sidebands` only when the unblinding distinction matters. Do not write `released sidebands`.
+- Use `requirement`, `selection`, `criterion`, or `cut` as appropriate. Do not use the generic noun `gate`.
+- Name the quantity that is available or missing, such as integrated luminosity, unblinded data, trigger coverage, sample coverage, or validation status. Do not use `exposure` as a generic substitute.
+- Use `signal window`, not `signal interval`.
+- Use `X-enriched`, not `X-rich`, for a selected sample with an enhanced fraction of process or object X.
+- State how samples are used. Samples are used to model, estimate, constrain, validate, or compare a quantity. They do not `supply` a model component.
+- Name the concrete object, such as a background PDF, sample, category, region, template, fit, or requirement. Do not write that a procedure `qualifies the support`, `admits a family`, or `checks support limits`.
+- Describe random sampling from the quantity being sampled. Weighted MC bin contents are sampled according to the effective-Poisson prescription. Do not say that `template replicas fluctuate`.
+- Avoid compressed labels such as `six frozen limits`, `Higgs-shaped yield`, or another invented compound unless it is a defined technical term in the analysis.
+- Define a weighted sum or mixture by naming its components and relative normalization. Do not use `mixture` or `family` without making the statistical meaning clear.
+
+Prefer passive voice when a non-person subject would otherwise appear to make a decision or perform an analysis action. A sample may contain events and a fit may converge, but a sample does not decide the model, a plot does not prove a claim, and a random number does not fluctuate an object. When the intended technical meaning cannot be recovered from the source, flag the sentence for the author instead of guessing.
+
+Use these corrections as few-shot patterns:
+
+| Avoid | Use |
+| --- | --- |
+| The released data sidebands are fit. | The data sidebands are fit. |
+| The workflow passes the model gate. | The model requirement is satisfied in the workflow. |
+| The nominal exposure is 168 fb$^{-1}$. | The integrated luminosity is 168 fb$^{-1}$. |
+| Events in the signal interval are hidden. | Events in the signal window are blinded. |
+| The top-rich sample supplies the background model. | The top-enriched sample is used to model the background. |
+| The procedure qualifies the support for the model family. | The candidate background PDF satisfies the stated sideband and spurious-signal requirements. |
+| Template replicas fluctuate the weighted bins with an effective-Poisson model. | The weighted MC bin contents are sampled according to the effective-Poisson prescription. |
+| Six frozen limits are reported. | Nominal expected limits are obtained in six regions. |
+| The pair-23 mixture provides the Higgs-shaped yield. | The pair-23 resonant model is a weighted sum of a DSCB component and an exponential component, with the relative normalization determined from simulation. |
+| The region yields a 9.77-event limit. | A 9.77-event median expected limit is obtained in the region. |
+| The model passes the gate. | The stated requirement is satisfied by the model. |
+| The plot checks support limits. | The comparison is used to test the stated numerical requirement. |
+
 ## Sentence structure
 
 Avoid the stock construction `not A; it is B` when B can be stated directly. The same applies to decorative `not only A, but also B` and `rather than A, B` constructions.
@@ -130,4 +164,6 @@ Before accepting visible text, ask:
 - Is the sentence short enough to read on a slide without becoming vague?
 - Does the opening preview the body of the slide?
 - Does any sample, simulation, table, or plot appear to act on the analysis when the intended meaning is that it was used by the analysis?
+- Are standard HEP terms used for sidebands, signal windows, enriched samples, luminosity, requirements, background PDFs, and weighted-MC sampling?
+- Is every mixture, family, limit label, and sample role defined concretely rather than compressed into invented shorthand?
 - Are semicolons, em dashes, vague uses of `fixes`, and vague caveat labels absent?

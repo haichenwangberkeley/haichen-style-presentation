@@ -20,6 +20,17 @@ PROHIBITED_VISIBLE_RE = (
     (re.compile(r"[A-Za-z0-9)\]]\s*;\s+[A-Za-z0-9(]"), "semicolon"),
     (re.compile(r"\u2014"), "em dash"),
     (re.compile(r"\bfixes\b", re.IGNORECASE), "the verb 'fixes'"),
+    (re.compile(r"\breleased\s+(?:data\s+)?sidebands?\b", re.IGNORECASE), "the phrase 'released sidebands'"),
+    (re.compile(r"\bgates?\b", re.IGNORECASE), "the generic term 'gate'"),
+    (re.compile(r"\bexposure\b", re.IGNORECASE), "the generic term 'exposure'"),
+    (re.compile(r"\bsignal\s+interval\b", re.IGNORECASE), "the phrase 'signal interval'"),
+    (re.compile(r"\b[A-Za-z]+-rich\b", re.IGNORECASE), "an '-rich' sample label"),
+    (re.compile(r"\bqualif(?:y|ies|ied)\s+(?:the\s+)?support\b", re.IGNORECASE), "the phrase 'qualifies the support'"),
+    (re.compile(r"\badmits?\s+(?:a|the)\s+family\b", re.IGNORECASE), "the phrase 'admits a family'"),
+    (re.compile(r"\bchecks?\s+support(?:\s+limits?)?\b", re.IGNORECASE), "the phrase 'checks support limits'"),
+    (re.compile(r"\btemplate\s+replicas?\s+fluctuat", re.IGNORECASE), "agentive template-replica wording"),
+    (re.compile(r"\bsix\s+frozen\s+limits?\b", re.IGNORECASE), "the phrase 'six frozen limits'"),
+    (re.compile(r"\bHiggs-shaped\s+yield\b", re.IGNORECASE), "the phrase 'Higgs-shaped yield'"),
 )
 
 
