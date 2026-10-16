@@ -13,6 +13,8 @@ Copy the theme, template, wordmark, and license into the presentation source dir
 
 Preserve the default `Presentation style by Haichen Wang` footer credit, the fuller title-slide credit, the source notices, and the bundled `LICENSE.md`. The footer credit is intentionally separate from the presentation author. If the credit must be relocated for a constrained format, provide equivalent reasonable attribution that identifies Haichen Wang's adaptation, the upstream Overleaf theme and authors, the CC BY 4.0 license, and any changes. Do not imply endorsement by Haichen Wang, Overleaf, or UC Berkeley.
 
+Keep the lower-right style credit white and extremely small: `\fontsize{1.5}{1.8}\selectfont`, as defined in the bundled theme. It should be unobtrusive at normal viewing size and readable only when greatly enlarged. This is an intentional exception to slide-text readability guidance for this decorative credit only. Keep slide numbers, source citations, opening and closing statements, and substantive content at their normal readable sizes.
+
 The UC Berkeley wordmark is excluded from the copyright license and remains subject to university trademark and brand requirements. Do not alter the wordmark or treat the CC BY license as permission to use university marks in a context that otherwise requires approval.
 
 Retain the three-component slide contract. Every frame needs exactly one visible `\slideopening{...}` before its body and one visible `\slideclosing{...}` after its body. Put source lines after the closing statement.

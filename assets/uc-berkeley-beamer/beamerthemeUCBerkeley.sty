@@ -75,8 +75,9 @@
     \node[anchor=south west,inner sep=0pt,draw=none,
       xshift=0.055\paperheight,yshift=0.005\paperheight]
       at (current page.south west) {\pgfuseimage{berkeleywordmark}};
+    % Deliberately unobtrusive style credit, readable only at high zoom.
     \node[anchor=south east,inner sep=0pt,draw=none,text=white,
-      font=\scriptsize,xshift=-0.035\paperheight,yshift=0.010\paperheight]
+      font=\fontsize{1.5}{1.8}\selectfont,xshift=-0.035\paperheight,yshift=0.010\paperheight]
       at (current page.south east) {\presentationstylecredit};
   \end{tikzpicture}%
 }
